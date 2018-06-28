@@ -4,5 +4,5 @@ Kino is movie catalogue iOS app.
 ### MVP:
 - Movie search
 - Movie detail
-- Add / remove from favorites
+- Add / remove from favourites
 - Favorites list based on local storage
