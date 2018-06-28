@@ -102,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68EA611E20E56B0800C8DC00 /* Build configuration list for PBXNativeTarget "Kino" */;
 			buildPhases = (
+				68EA612720E570D800C8DC00 /* swiftlint */,
 				68EA60FD20E56B0600C8DC00 /* Sources */,
 				68EA60FE20E56B0600C8DC00 /* Frameworks */,
 				68EA60FF20E56B0600C8DC00 /* Resources */,
@@ -189,6 +190,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68EA612720E570D800C8DC00 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/buildPhases/swiftlint";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		68EA60FD20E56B0600C8DC00 /* Sources */ = {

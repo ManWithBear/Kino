@@ -1,0 +1,46 @@
+indentation: 4
+
+disabled_rules: # rule identifiers to exclude from running
+ - conditional_returns_on_newline
+ - private_outlet
+ - switch_case_on_newline
+ - redundant_optional_initialization
+ - sorted_imports
+ - shorthand_operator
+ - explicit_type_interface
+ - file_header
+ - notification_center_detachment
+ - number_separator
+ - empty_enum_arguments
+ - empty_parentheses_with_trailing_closure
+
+opt_in_rules:
+ - closure_spacing
+ - contains_over_first_not_nil
+ - explicit_init
+ - force_unwrapping
+ - literal_expression_end_indentation
+ - overridden_super_call
+ - redundant_nil_coalescing
+ - closure_end_indentation
+ - first_where
+ - operator_whitespace
+ - operator_usage_whitespace
+ - fatal_error_message
+ - implicitly_unwrapped_optional
+ - multiline_arguments
+ - multiline_parameters
+ - empty_count
+ - unneeded_parentheses_in_closure_argument
+ - vertical_parameter_alignment_on_call
+
+excluded:
+ - Pods
+
+function_body_length:
+  warning: 20
+  error: 40
+
+line_length:
+  warning: 150
+  error: 150
