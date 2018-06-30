@@ -15,9 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = UIViewController()
+        window.rootViewController = dummySearch()
         window.makeKeyAndVisible()
         self.window = window
         return true
+    }
+
+    func dummySearch() -> UIViewController {
+        let flow = SearchFlow(
+            onItemSelection: { print("Did select item with title: \($0.title ?? "<- No title ->")") }
+        )
+        return SearchFactoryImpl(.init(search: DummyMovieSearchProvider()))
+            .make(with: flow)
     }
 }
