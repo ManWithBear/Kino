@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func dummySearch() -> UIViewController {
+        return SearchViewController(DummySearchViewModel())
         let flow = SearchFlow(
             onItemSelection: { print("Did select item with title: \($0.title ?? "<- No title ->")") }
         )

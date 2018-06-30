@@ -15,7 +15,7 @@ extension Movie.Preview {
        overview: "When an unexpected enemy emerges and threatens global safety and security...",
        released: Date(),
        id: 24428,
-       originalTitle:  "The Avengers",
+       originalTitle: "The Avengers",
        originalLanguage: "en",
        title: "The Avengers",
        backdrop: "/hbn46fQaRmlpBuUrEiFqv0GDL6Y.jpg",
@@ -32,5 +32,36 @@ class DummyMovieSearchProvider: MovieSearchProvider {
 
     func query(_ query: String, page: Int) -> Single<Page<Movie.Preview>> {
         return .just(self.page)
+    }
+}
+
+class DummySearchViewModel: SearchViewModel {
+    var searchStateStream: Observable<SearchState> {
+        let items: [SearchItem] = [
+            .data(SearchData(title: "My title")),
+            .loading,
+            .error(msg: "Here my error")
+        ]
+        return .just(.data(items: items))
+    }
+
+    func didChangeSearch(_ text: String) {
+        print("\(#function) - \(text)")
+    }
+
+    func didCancel() {
+        print("\(#function)")
+    }
+
+    func didSelectItem(at index: Int) {
+        print("\(#function) - \(index)")
+    }
+
+    func loadData() {
+        print("\(#function)")
+    }
+
+    func retryLoading() {
+        print("\(#function)")
     }
 }

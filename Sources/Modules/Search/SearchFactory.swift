@@ -27,7 +27,7 @@ class SearchFactoryImpl {
 extension SearchFactoryImpl: SearchFactory {
     func make(with flow: SearchFlow) -> UIViewController {
         let vmDeps = SearchViewModelImpl.Dependencies(search: deps.search)
-        let vm = SearchViewModelImpl(flow, vmDeps)
-        return SearchViewController(vm)
+        let viewModel = SearchViewModelImpl(flow, vmDeps)
+        return SearchViewController(viewModel)
     }
 }
