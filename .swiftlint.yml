@@ -1,6 +1,7 @@
 indentation: 4
 
 disabled_rules: # rule identifiers to exclude from running
+ - nesting
  - conditional_returns_on_newline
  - private_outlet
  - switch_case_on_newline
@@ -49,3 +50,6 @@ variable_name:
   excluded:
     - id
 
+type_name:
+  excluded:
+    - ID

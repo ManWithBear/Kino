@@ -14,8 +14,8 @@ class PageSpec: QuickSpec {
     override func spec() {
         describe("Page") {
             it("able to decode from data") {
-                // Act: try to decode movie
-                guard let page = try? JSONDecoder().decode(Page<Int>.self, from: PageSpec.pageData) else {
+                // Act: try to decode page
+                guard let page = try? JSONDecoder().decode(Page<Int>.self, from: PageSpec.data) else {
                     fail("Unable to decode page")
                     return
                 }
@@ -29,10 +29,10 @@ class PageSpec: QuickSpec {
         }
     }
 
-    static var pageData: Data {
-        return pageJSON.data(using: .utf8)!
+    static var data: Data {
+        return json.data(using: .utf8)!
     }
-    static let pageJSON = """
+    static let json = """
         {
         "page": 1,
         "results": [1],
