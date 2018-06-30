@@ -37,6 +37,7 @@ opt_in_rules:
 
 excluded:
  - Pods
+ - Sourcery
 
 function_body_length:
   warning: 20

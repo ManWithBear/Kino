@@ -1,0 +1,2 @@
+#!/bin/bash
+sourcery --sources Sources --sources Tests --templates Sourcery/Templates/AutoMockable.stencil --output Sourcery/Generated/
