@@ -12,6 +12,9 @@ import RxSwift
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar?
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView?
+    @IBOutlet weak var errorView: UIView?
+    @IBOutlet weak var errorLabel: UILabel?
     @IBOutlet weak var table: UITableView? {
         didSet {
             tableManager.table = table
@@ -65,6 +68,10 @@ class SearchViewController: UIViewController {
     }
 
     // MARK: - Actions
+    @IBAction func didTapOnRetry() {
+        viewModel.retryLoading()
+    }
+
     func subscribeToState() {
         viewModel.searchStateStream
             .subscribe(
@@ -77,17 +84,26 @@ class SearchViewController: UIViewController {
         switch state {
         case .idle:
             table?.isHidden = true
+            loadingIndicator?.stopAnimating()
+            errorView?.isHidden = true
 
         case .loading:
             table?.isHidden = true
+            loadingIndicator?.startAnimating()
+            errorView?.isHidden = true
 
         case .data(items: let items):
             table?.isHidden = false
             tableManager.items = items
+            loadingIndicator?.stopAnimating()
+            errorView?.isHidden = true
 
         case .error(msg: let error):
             print("Error: \(error)")
             table?.isHidden = true
+            loadingIndicator?.stopAnimating()
+            errorView?.isHidden = false
+            errorLabel?.text = error
         }
     }
 }

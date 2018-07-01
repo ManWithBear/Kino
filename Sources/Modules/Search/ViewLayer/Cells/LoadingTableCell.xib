@@ -19,13 +19,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hEl-Vq-6vr">
-                        <rect key="frame" x="150" y="11" width="20" height="20"/>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hEl-Vq-6vr">
+                        <rect key="frame" x="142" y="3.5" width="37" height="37"/>
+                        <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </activityIndicatorView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="hEl-Vq-6vr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="D4G-rg-reQ"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hEl-Vq-6vr" secondAttribute="bottom" id="O0n-m9-cYl"/>
                     <constraint firstItem="hEl-Vq-6vr" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ZRf-JH-lAm"/>
+                    <constraint firstItem="hEl-Vq-6vr" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" id="fDF-2R-rRQ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

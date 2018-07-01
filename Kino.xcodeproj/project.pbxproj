@@ -13,6 +13,7 @@
 		6825D34220E8323A0068F741 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6825D34120E8323A0068F741 /* Configuration.swift */; };
 		6825D34520E8F75D0068F741 /* FakeURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6825D34420E8F75D0068F741 /* FakeURLSession.swift */; };
 		6825D34820E8F9DD0068F741 /* NetworkerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6825D34720E8F9DD0068F741 /* NetworkerSpec.swift */; };
+		6825D34A20E9193E0068F741 /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6825D34920E9193E0068F741 /* Pager.swift */; };
 		68EA610520E56B0600C8DC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA610420E56B0600C8DC00 /* AppDelegate.swift */; };
 		68EA610C20E56B0800C8DC00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68EA610B20E56B0800C8DC00 /* Assets.xcassets */; };
 		68EA610F20E56B0800C8DC00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68EA610D20E56B0800C8DC00 /* LaunchScreen.storyboard */; };
@@ -74,6 +75,7 @@
 		6825D34120E8323A0068F741 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		6825D34420E8F75D0068F741 /* FakeURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeURLSession.swift; sourceTree = "<group>"; };
 		6825D34720E8F9DD0068F741 /* NetworkerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkerSpec.swift; sourceTree = "<group>"; };
+		6825D34920E9193E0068F741 /* Pager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
 		68EA610120E56B0600C8DC00 /* Kino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68EA610420E56B0600C8DC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68EA610B20E56B0800C8DC00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			children = (
 				68EA616920E7CB2400C8DC00 /* MovieSearchProvider.swift */,
 				6825D33F20E831260068F741 /* Networker.swift */,
+				6825D34920E9193E0068F741 /* Pager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				68EA615C20E7C34A00C8DC00 /* SearchItem.swift in Sources */,
 				68EA618520E7D8FE00C8DC00 /* SearchDataTableCell.swift in Sources */,
 				68EA610520E56B0600C8DC00 /* AppDelegate.swift in Sources */,
+				6825D34A20E9193E0068F741 /* Pager.swift in Sources */,
 				68EA615720E7C1C800C8DC00 /* SearchViewController.swift in Sources */,
 				68EA613F20E7B29B00C8DC00 /* Company.swift in Sources */,
 				68EA616E20E7CD2700C8DC00 /* Dummies.swift in Sources */,
@@ -772,7 +776,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Q52NDZ74N;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.kino.Kino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -788,7 +795,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Q52NDZ74N;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.kino.Kino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -805,7 +815,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Q52NDZ74N;
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.kino.KinoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -824,7 +838,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Q52NDZ74N;
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.kino.KinoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

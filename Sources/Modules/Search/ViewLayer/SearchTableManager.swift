@@ -35,7 +35,7 @@ class SearchTableManager: NSObject {
     func setup(with table: UITableView) {
         table.dataSource = self
         table.delegate = self
-        table.estimatedRowHeight = 44
+        table.rowHeight = 44
         table.register(LoadingTableCell.self)
         table.register(ErrorTableCell.self)
         table.register(SearchDataTableCell.self)

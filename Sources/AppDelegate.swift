@@ -22,11 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func dummySearch() -> UIViewController {
-        return SearchViewController(DummySearchViewModel())
+//        return SearchViewController(DummySearchViewModel())
         let flow = SearchFlow(
             onItemSelection: { print("Did select item with title: \($0.title ?? "<- No title ->")") }
         )
-        return SearchFactoryImpl(.init(search: DummyMovieSearchProvider()))
+        let session = URLSession.shared
+        let networker = Networker(apiKey: Configurations.moviedbApiKey, session: session)
+        return SearchFactoryImpl(.init(search: networker))
             .make(with: flow)
     }
 }
