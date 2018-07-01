@@ -25,6 +25,35 @@ extension Movie.Preview {
     )
 }
 
+extension Movie.Detail {
+    static let dummy = Movie.Detail(
+       isAdult: true,
+       backdrop: nil,
+       collections: nil,
+       budget: 2001,
+       genres: [],
+       homepage: "page",
+       id: 210,
+       imdbID: "String",
+       originalLanguage: "en",
+       originalTitle: "title",
+       overview: "not so long overview",
+       popularity: 2.0,
+       poster: nil,
+       productionCompanies: nil,
+       productionCountries: nil,
+       released: nil,
+       revenue: 21000,
+       duration: 120,
+       spokenLanguages: [],
+       status: .released,
+       tagline: "Yes, it's tagline",
+       title: "One more title",
+       averageVote: 1.2,
+       voteCount: 200001
+    )
+}
+
 class DummyMovieSearchProvider: MovieSearchProvider {
     let page: Page<Movie.Preview> = {
         return Page<Movie.Preview>(page: 1, results: [.dummy], totalResults: 0, totalPages: 1)

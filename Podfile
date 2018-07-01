@@ -11,5 +11,6 @@ target 'Kino' do
     inherit! :search_paths
     pod 'Quick'
     pod 'Nimble'
+    pod 'RxBlocking'
   end
 end

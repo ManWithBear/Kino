@@ -50,6 +50,7 @@ line_length:
 variable_name:
   excluded:
     - id
+    - me
 
 type_name:
   excluded:
