@@ -30,7 +30,7 @@ class MovieSpec: QuickSpec {
                     // Assert: check all properties
                     expect(preview.poster) == "/cezWGskPY5x7GaglTTRN4Fugfb8.jpg"
                     expect(preview.overview) == "When an unexpected enemy emerges and threatens global safety and security..."
-                    expect(preview.released) == dateFormatter.date(from: "2012-04-25")!
+                    expect(preview.released) == "2012-04-25"
                     expect(preview.id) == 24428
                     expect(preview.originalTitle) ==  "The Avengers"
                     expect(preview.originalLanguage) == "en"
@@ -65,7 +65,7 @@ class MovieSpec: QuickSpec {
                     expect(detail.poster) == "/fCayJrkfRaCRCTh8GqN30f8oyQF.jpg"
                     expect(detail.productionCompanies?.count) == 1
                     expect(detail.productionCountries?.count) == 1
-                    expect(detail.released) == dateFormatter.date(from: "1999-10-12")!
+                    expect(detail.released) == "1999-10-12"
                     expect(detail.revenue) == 100853753
                     expect(detail.duration) == 139
                     expect(detail.spokenLanguages?.count) == 1

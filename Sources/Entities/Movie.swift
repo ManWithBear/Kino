@@ -29,7 +29,7 @@ enum Movie {
 
         let poster: ImagePath?
         let overview: String?
-        let released: Date?
+        let released: String?
         let id: ID
         let originalTitle: String?
         let originalLanguage: Language.ID?
@@ -84,7 +84,7 @@ enum Movie {
         let poster: ImagePath?
         let productionCompanies: [Company.Preview]?
         let productionCountries: [Country]?
-        let released: Date?
+        let released: String?
         let revenue: Int?
         let duration: Int?
         let spokenLanguages: [Language]?

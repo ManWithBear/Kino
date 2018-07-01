@@ -13,7 +13,7 @@ extension Movie.Preview {
     static let dummy = Movie.Preview(
        poster: "/cezWGskPY5x7GaglTTRN4Fugfb8.jpg",
        overview: "When an unexpected enemy emerges and threatens global safety and security...",
-       released: Date(),
+       released: "2013-01-05",
        id: 24428,
        originalTitle: "The Avengers",
        originalLanguage: "en",
