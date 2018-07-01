@@ -118,8 +118,7 @@ extension SearchViewModelImpl: SearchViewModel {
 
     func didSelectItem(at index: Int) {
         guard index < recentPreviews.count else { return }
-        let movie = recentPreviews[index]
-        print("DidSelect: \(movie.title)")
+        flow.onItemSelection(recentPreviews[index])
     }
 
     func loadData() {

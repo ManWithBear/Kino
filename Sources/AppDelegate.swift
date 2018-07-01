@@ -12,23 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var mainFlow: FlowCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        let networker = Networker(apiKey: Configurations.moviedbApiKey, session: URLSession.shared)
+        let searchFactory = SearchFactoryImpl(.init(search: networker))
+        let flow = SearchFlowCoordinatorImpl(.init(searchFactory: searchFactory))
+        mainFlow = flow
+
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = dummySearch()
+        window.rootViewController = flow.startFlow()
         window.makeKeyAndVisible()
         self.window = window
         return true
-    }
-
-    func dummySearch() -> UIViewController {
-//        return SearchViewController(DummySearchViewModel())
-        let flow = SearchFlow(
-            onItemSelection: { print("Did select item with title: \($0.title ?? "<- No title ->")") }
-        )
-        let session = URLSession.shared
-        let networker = Networker(apiKey: Configurations.moviedbApiKey, session: session)
-        return SearchFactoryImpl(.init(search: networker))
-            .make(with: flow)
     }
 }
